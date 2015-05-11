@@ -12,6 +12,7 @@
   "author": "lx7575000 <liu_narcisus@163.com> (https://github.com/lx7575000)",
   "license": "MIT",
   "dependencies": {
-    "connect": "^3.0.1"
+    "connect": "^3.0.1",
+    "minimist": "^1.1.1"
   }
 }
