@@ -1,8 +1,9 @@
-#!/usr/bin/env node
+#!/usr/bin/env nodemon
 var createMiniHarp = require("../index.js");
 var parsedArgv = require('minimist')(process.argv.slice(2));
 
-
-app = createMiniHarp(parsedArgv._);
 var port =  parseInt(parsedArgv._);
-app.listen(port);
+
+app = createMiniHarp(port || 4000);
+
+app();

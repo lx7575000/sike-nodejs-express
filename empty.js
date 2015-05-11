@@ -1,6 +1,7 @@
 var connect = require('connect');
 var url = require('url');
 var http = require('http');
+var serveStatic = require('serve-static');
 
 connect()
 	.use(function (req, res, next){
@@ -10,7 +11,6 @@ connect()
 		res.end('Now is ' + date + '\n');
 		next();
 	}else{
-		// res.end('Please query the date with POST method and you shoul visit current-time');
 		res.end('Gannot Get ' + pathname + '\n');
 		next();
 	}
