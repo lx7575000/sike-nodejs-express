@@ -7,4 +7,11 @@ var path = argv._[0] ? argv._[0] : process.cwd();//获得地址
 var app = createMiniHarp(path);
 console.log('Starting mini-harp on http://localhost: ' + port);
 app()
+	.use(function(req, res, next){
+		if(req.url ==='/current-time')
+		{
+			res.end('The time is ' + new Date().toString());
+		}
+		next();
+	})
 	.listen(port);
