@@ -2,6 +2,6 @@
 var createMiniHarp = require("../index.js");
 var parsedArgv = require('minimist')(process.argv.slice(2));
 
-
-var app = createMiniHarp(); 
+var port = parseInt(parsedArgv._);
+var app = createMiniHarp(port); 
 app();
